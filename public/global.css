@@ -1,0 +1,38 @@
+:root{
+	--bg: #0e1212;
+	--purple: #682ae9;
+	--light: #dbdbdb;
+	--header-link: #dbdbdb;
+}
+
+html, body {
+	background-color: var(--bg);
+	position: relative;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: ARS Maquette Web One, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* FONT */
+@font-face {font-family: "ARS Maquette Web One"; src: url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.eot"); src: url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.woff") format("woff"), url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.svg#ARS Maquette Web One") format("svg"); } 
+
+
+/* Small devices (mobile, 480px and up) */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+}
