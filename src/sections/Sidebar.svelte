@@ -3,19 +3,22 @@
 
     export let show = false;
 
+    let home = '<home/>'
     let skills = '<skills/>'
     let work = '<work/>'
     let about = '<about/>'
-    let ex = 'X'
 </script>
 
 {#if show}
-  <nav transition:fly={{x:0}}>
-    <span class="ex" on:click={() => show = !show}>{ex}</span>
+  <nav transition:fly={{duration: 600}}>
+    <div class="head" >
+        <span class="home"><a href="#hi" on:click={() => show = !show}>{home}</a></span>
+        <span class="cross" on:click={() => show = !show}>X</span>
+    </div>
     <div class="sideOptions">
-        <a href="#about">{about}</a>
-        <a href="#skills">{skills}</a>
-        <a href="#work">{work}</a>
+        <a href="#about" on:click={() => show = !show}>{about}</a>
+        <a href="#skills" on:click={() => show = !show}>{skills}</a>
+        <a href="#work" on:click={() => show = !show}>{work}</a>
     </div>
   </nav>
 {/if}
@@ -31,23 +34,29 @@
         width: 100%;
     }
 
-    a{
-        text-decoration: none;
-        margin-right: 10px;
-        transition: color 0.5s;
-    }
-    
-    a:hover{
-        color: var(--purple);
+    .head{
+        display: flex;
+        justify-content: space-between;
     }
 
-    .ex{
+    .home{
+        font-size: 1.4em;
+        cursor: pointer;
+        margin-top: 5px;
+        padding-left: 7px;
+    }
+    
+    .home a{
+        color: var(--purple);
+        text-decoration: none;
+    }
+
+    .cross{
         color: var(--purple);
         cursor: pointer;
         font-size: 2.3em;
-        display: flex;
-        justify-content: flex-end;
         margin-right: 11px;
+        text-decoration: none;
     }
 
     .sideOptions{
@@ -61,5 +70,12 @@
     .sideOptions a{
         color: var(--light);
         margin-top: 3.5vh;
+        text-decoration: none;
+        margin-right: 10px;
+        transition: color 0.5s;
+    }
+
+    .sideOptions a:hover{
+        color: var(--purple);
     }
 </style>

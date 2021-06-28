@@ -106,7 +106,6 @@
         .burger{
             display: none;
         }
-
     }
 
 </style>
