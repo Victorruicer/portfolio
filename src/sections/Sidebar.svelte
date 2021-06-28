@@ -10,12 +10,12 @@
 </script>
 
 {#if show}
-  <nav transition:fly={{x: 300, opacity: 1}}>
+  <nav transition:fly={{x:0}}>
     <span class="ex" on:click={() => show = !show}>{ex}</span>
     <div class="sideOptions">
+        <a href="#about">{about}</a>
         <a href="#skills">{skills}</a>
         <a href="#work">{work}</a>
-        <a href="#about">{about}</a>
     </div>
   </nav>
 {/if}
@@ -26,9 +26,19 @@
         top: 0;
         right: 0;
         height: 100%;
-        background: linear-gradient(to left, rgb(14, 18, 18, 1) 50%, rgb(14, 18, 18, 0));
+        background: rgb(14, 18, 18, 0.9);
         overflow-y: auto;
         width: 100%;
+    }
+
+    a{
+        text-decoration: none;
+        margin-right: 10px;
+        transition: color 0.5s;
+    }
+    
+    a:hover{
+        color: var(--purple);
     }
 
     .ex{
@@ -45,11 +55,11 @@
         float: right;
         display: flex;
         flex-direction: column-reverse;
-        height: 70%;
+        height: 75%;
     }
 
     .sideOptions a{
         color: var(--light);
-        margin-top: 4vh;
+        margin-top: 3.5vh;
     }
 </style>

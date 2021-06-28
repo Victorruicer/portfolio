@@ -17,11 +17,13 @@
         </div>
         
         <!-- MOBILE -->
-        <div class="burger" on:click={() => sidebar_show = !sidebar_show}>
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+        {#if !sidebar_show}
+            <div class="burger" on:click={() => sidebar_show = !sidebar_show}>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        {/if}
         
         <!-- PC -->
         <div class="nav-links">
@@ -35,23 +37,25 @@
 <Sidebar bind:show={sidebar_show} />
 
 <style>
-    .home{
-        color: var(--purple);
-        font-size: 1.4em;
-        cursor: pointer;
-    }
-
     header{
         display: flex;
         justify-content: space-between;
-        padding: 1vh;
     }
 
     .sticky{
         position: fixed;
         width: 100%;
+        top: 0;
+        margin-top: 5px;
+        padding-left: 7px;
         padding-bottom: 5vh;
         background: linear-gradient(rgb(14, 18, 18, 1) 50%, rgb(14, 18, 18, 0));
+    }
+
+    .home{
+        color: var(--purple);
+        font-size: 1.4em;
+        cursor: pointer;
     }
     
     a{
@@ -62,6 +66,7 @@
     .burger{
         cursor: pointer;
         display: block;
+        padding-right: 15px;
     }
 
     .burger div{

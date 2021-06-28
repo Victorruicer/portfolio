@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "boostrap": "^2.0.0",
+    "gsap": "^3.7.0",
+    "scrollmagic": "^2.0.8",
     "sirv-cli": "^1.0.0"
   }
 }
